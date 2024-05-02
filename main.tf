@@ -328,7 +328,7 @@ resource "aws_lb_target_group_attachment" "external-elb1" {
 }
 
 resource "aws_lb_target_group_attachment" "external-elb2" {
-  target_group_arn = aws_lb_target_group.external-elb1.arn
+  target_group_arn = aws_lb_target_group.external-elb.arn
   target_id        = aws_instance.webserver2.id
   port             = 80
 
