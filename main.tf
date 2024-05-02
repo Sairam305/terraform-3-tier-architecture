@@ -328,7 +328,7 @@ resource "aws_lb_target_group_attachment" "external-elb1" {
 }
 
 resource "aws_lb_target_group_attachment" "external-elb2" {
-  target_group_arn = aws_lb_target_group.external-elb.arn
+  target_group_arn = aws_lb_target_group.external-elb1.arn
   target_id        = aws_instance.webserver2.id
   port             = 80
 
@@ -358,10 +358,10 @@ output "lb_dns_name" {
 
 
 resource "aws_s3_bucket" "example" {
-  bucket = "rahamtestbycketterra7788"
+  bucket = "sairamterraform12345"
 
   tags = {
-    Name        = "rahamtestbycketterra7788"
+    Name        = "sairamterraform12345"
     Environment = "Dev"
   }
 }
